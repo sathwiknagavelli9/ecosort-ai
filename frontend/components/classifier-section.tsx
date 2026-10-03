@@ -131,7 +131,8 @@ export function ClassifierSection() {
         </div>
         <p>
           Use one well-lit item against a simple background. Your image is sent only when you
-          press <strong>Classify waste</strong> and is processed in memory by the inference API.
+          press <strong>Classify waste</strong> and is processed only for that request by the
+          inference API.
         </p>
       </div>
 
