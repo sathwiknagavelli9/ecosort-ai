@@ -1,0 +1,239 @@
+{
+  "project": "EcoSort AI",
+  "model": "MobileNetV2 transfer learning",
+  "generated_at_utc": "2026-10-03T03:10:08.661629+00:00",
+  "tensorflow_version": "2.20.0",
+  "python_version": "3.13.15",
+  "gpu_devices": [
+    "/physical_device:GPU:0"
+  ],
+  "random_seed": 42,
+  "dataset": {
+    "name": "TrashNet resized",
+    "verified_source": "Original-author Hugging Face mirror (pinned revision)",
+    "source_url": "https://huggingface.co/datasets/garythung/trashnet/resolve/94cd17ebfd6702bf62281d3c89f22ff649815b46/dataset-resized.zip?download=true",
+    "archive_sha256": "c060e8abfe5d6de0578ca15be1ed8ad0794a865d333c3473d53d1d9ad6e38b8c",
+    "canonical_raw_class_counts": {
+      "cardboard": 403,
+      "glass": 501,
+      "metal": 410,
+      "paper": 594,
+      "plastic": 482,
+      "trash": 137
+    },
+    "quality_audit": {
+      "raw_images": 2527,
+      "corrupt_images_excluded": 0,
+      "cross_label_exact_images_quarantined": 6,
+      "cross_label_exact_groups": 3,
+      "same_label_exact_copies_removed": 0,
+      "usable_images": 2521,
+      "perceptual_near_duplicate_links": 26,
+      "multi_image_duplicate_groups": 26,
+      "cross_label_perceptual_groups": 0
+    },
+    "usable_class_counts": {
+      "cardboard": 403,
+      "glass": 498,
+      "metal": 409,
+      "paper": 594,
+      "plastic": 480,
+      "trash": 137
+    }
+  },
+  "splits": {
+    "method": "nested StratifiedGroupKFold with detected duplicate groups",
+    "sizes": {
+      "train": 1800,
+      "validation": 360,
+      "test": 361
+    },
+    "class_counts": {
+      "train": {
+        "cardboard": 288,
+        "glass": 356,
+        "metal": 292,
+        "paper": 425,
+        "plastic": 341,
+        "trash": 98
+      },
+      "validation": {
+        "cardboard": 57,
+        "glass": 71,
+        "metal": 58,
+        "paper": 85,
+        "plastic": 70,
+        "trash": 19
+      },
+      "test": {
+        "cardboard": 58,
+        "glass": 71,
+        "metal": 59,
+        "paper": 84,
+        "plastic": 69,
+        "trash": 20
+      }
+    }
+  },
+  "training": {
+    "image_size": [
+      224,
+      224
+    ],
+    "batch_size": 32,
+    "initial_epochs_completed": 25,
+    "fine_tune_epochs_completed": 12,
+    "initial_learning_rate": 0.001,
+    "fine_tune_learning_rate": 1e-05,
+    "dropout_rate": 0.35,
+    "class_weights": {
+      "cardboard": 1.0416666666666667,
+      "glass": 0.8426966292134831,
+      "metal": 1.0273972602739727,
+      "paper": 0.7058823529411765,
+      "plastic": 0.8797653958944281,
+      "trash": 3.061224489795918
+    },
+    "fine_tuning_attempted": true,
+    "fine_tuning_decision": {
+      "initial_best_val_accuracy": 0.8138889074325562,
+      "initial_train_val_accuracy_gap": 0.029444396495819092,
+      "minimum_val_accuracy_required": 0.55,
+      "maximum_gap_allowed": 0.2
+    }
+  },
+  "model_selection": {
+    "selected_stage": "fine_tuned",
+    "criterion": "lowest validation loss; validation accuracy tie-breaker",
+    "validation_candidates": {
+      "initial": {
+        "accuracy": 0.8138889074325562,
+        "loss": 0.5045520067214966
+      },
+      "fine_tuned": {
+        "accuracy": 0.8694444298744202,
+        "loss": 0.4174753427505493
+      }
+    },
+    "test_data_used_for_selection": false
+  },
+  "test_metrics": {
+    "loss": 0.4476945102214813,
+    "accuracy": 0.850415512465374,
+    "precision_macro": 0.8256227190345299,
+    "recall_macro": 0.8280514797222903,
+    "f1_macro": 0.8259942272207406,
+    "precision_weighted": 0.8500693487575753,
+    "recall_weighted": 0.850415512465374,
+    "f1_weighted": 0.8493687824131492
+  },
+  "confusion_matrix_labels": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ],
+  "confusion_matrix": [
+    [
+      54,
+      0,
+      0,
+      2,
+      0,
+      2
+    ],
+    [
+      0,
+      53,
+      7,
+      1,
+      9,
+      1
+    ],
+    [
+      0,
+      2,
+      55,
+      1,
+      1,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      79,
+      1,
+      2
+    ],
+    [
+      0,
+      11,
+      3,
+      0,
+      53,
+      2
+    ],
+    [
+      1,
+      0,
+      2,
+      2,
+      2,
+      13
+    ]
+  ],
+  "classification_report": {
+    "cardboard": {
+      "precision": 0.9473684210526315,
+      "recall": 0.9310344827586207,
+      "f1-score": 0.9391304347826087,
+      "support": 58.0
+    },
+    "glass": {
+      "precision": 0.803030303030303,
+      "recall": 0.7464788732394366,
+      "f1-score": 0.7737226277372263,
+      "support": 71.0
+    },
+    "metal": {
+      "precision": 0.8208955223880597,
+      "recall": 0.9322033898305084,
+      "f1-score": 0.873015873015873,
+      "support": 59.0
+    },
+    "paper": {
+      "precision": 0.9294117647058824,
+      "recall": 0.9404761904761905,
+      "f1-score": 0.9349112426035503,
+      "support": 84.0
+    },
+    "plastic": {
+      "precision": 0.803030303030303,
+      "recall": 0.7681159420289855,
+      "f1-score": 0.7851851851851852,
+      "support": 69.0
+    },
+    "trash": {
+      "precision": 0.65,
+      "recall": 0.65,
+      "f1-score": 0.65,
+      "support": 20.0
+    },
+    "accuracy": 0.850415512465374,
+    "macro avg": {
+      "precision": 0.8256227190345299,
+      "recall": 0.8280514797222903,
+      "f1-score": 0.8259942272207406,
+      "support": 361.0
+    },
+    "weighted avg": {
+      "precision": 0.8500693487575753,
+      "recall": 0.850415512465374,
+      "f1-score": 0.8493687824131492,
+      "support": 361.0
+    }
+  }
+}

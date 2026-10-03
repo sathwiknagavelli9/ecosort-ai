@@ -1,0 +1,46 @@
+{
+  "class_names": [
+    "cardboard",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "trash"
+  ],
+  "class_to_index": {
+    "cardboard": 0,
+    "glass": 1,
+    "metal": 2,
+    "paper": 3,
+    "plastic": 4,
+    "trash": 5
+  },
+  "index_to_class": {
+    "0": "cardboard",
+    "1": "glass",
+    "2": "metal",
+    "3": "paper",
+    "4": "plastic",
+    "5": "trash"
+  },
+  "input_shape": [
+    224,
+    224,
+    3
+  ],
+  "input_dtype": "float32",
+  "raw_input_range": [
+    0,
+    255
+  ],
+  "preprocessing": {
+    "name": "MobileNetV2",
+    "included_in_model": true,
+    "operation": "x / 127.5 - 1.0",
+    "model_range": [
+      -1,
+      1
+    ]
+  },
+  "output": "softmax probabilities in class_names order"
+}
