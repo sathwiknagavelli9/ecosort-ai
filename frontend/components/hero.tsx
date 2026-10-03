@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, Leaf, ScanLine, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowRight, Leaf, ScanLine } from "lucide-react";
 import { MODEL_METRICS, formatPercent } from "@/lib/model-data";
 
 const categoryLabels = [
@@ -17,10 +17,6 @@ export function Hero() {
       <div className="hero__glow hero__glow--two" aria-hidden="true" />
       <div className="container hero__grid">
         <div className="hero__copy">
-          <div className="hero__badge">
-            <Sparkles size={14} aria-hidden="true" />
-            B.Tech deep learning project
-          </div>
           <h1>
             Scan. Sort.
             <span>Recycle smarter.</span>

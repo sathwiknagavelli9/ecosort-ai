@@ -1,4 +1,4 @@
-import { ArrowUp, GraduationCap, Leaf } from "lucide-react";
+import { ArrowUp, Leaf } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -25,8 +25,8 @@ export function SiteFooter() {
       </div>
       <div className="container site-footer__bottom">
         <span>
-          <GraduationCap size={17} aria-hidden="true" />
-          Educational B.Tech deep learning project
+          <Leaf size={17} aria-hidden="true" />
+          MobileNetV2 waste classification
         </span>
         <p>General guidance only · Always follow local disposal rules</p>
         <a href="#top" aria-label="Back to top">
