@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EcoSort AI leaf mark">
+  <rect width="64" height="64" rx="16" fill="#0d2d27"/>
+  <path d="M47 15c-15 1-27 7-29 19-2 9 5 15 13 14 13-2 17-17 16-33Z" fill="#b8d88b"/>
+  <path d="M17 49c6-12 13-19 25-27" fill="none" stroke="#f5f2e9" stroke-width="4" stroke-linecap="round"/>
+</svg>
