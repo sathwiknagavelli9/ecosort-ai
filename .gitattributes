@@ -1,6 +1,3 @@
-# The canonical trained model is a binary artifact and should never be text-diffed.
-backend/models/*.keras binary
-
 # Keep source and configuration files normalized across Windows and Linux deployments.
 * text=auto
 *.py text eol=lf
@@ -10,3 +7,6 @@ backend/models/*.keras binary
 *.md text eol=lf
 *.yaml text eol=lf
 *.yml text eol=lf
+
+# The canonical trained model is a binary artifact and should never be text-diffed.
+backend/models/*.keras binary
